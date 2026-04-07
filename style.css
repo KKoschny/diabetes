@@ -852,6 +852,40 @@ button { cursor: pointer; background: none; border: none; font: inherit; color: 
   max-width: 100%;
 }
 
+/* ── Inline Explainer (aufklappbar innerhalb habit-card) ───────────────────── */
+.inline-explainer {
+  margin-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+}
+.inline-explainer summary {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.inline-explainer summary::before {
+  content: '+';
+  font-size: 1.1em;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+.inline-explainer[open] summary::before {
+  content: '−';
+}
+.inline-explainer p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-top: var(--space-3);
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--color-primary);
+}
+
 /* ── Support List ──────────────────────────────────────────────────────────── */
 .support-list {
   display: flex;
